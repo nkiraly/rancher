@@ -444,7 +444,7 @@ func (ma *MemberAccess) getUserFromUserPrincipalID(userPrincipalID string) (*v3.
 		if slice.ContainsString(u.PrincipalIDs, userPrincipalID) {
 			if match != nil {
 				// error out on duplicates
-				return nil, fmt.Errorf("can't find unique user for principal %v", userPrincipalID)
+				return nil, fmt.Errorf("447 can't find unique user for principal %v", userPrincipalID)
 			}
 			match = &u
 		}

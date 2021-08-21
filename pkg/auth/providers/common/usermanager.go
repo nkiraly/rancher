@@ -701,7 +701,7 @@ func (m *userManager) checkCache(principalName string) (*v3.User, error) {
 		return nil, err
 	}
 	if len(users) > 1 {
-		return nil, errors.Errorf("can't find unique user for principal %v", principalName)
+		return nil, errors.Errorf("704 can't find unique user for principal %v", principalName)
 	}
 	if len(users) == 1 {
 		u := users[0].(*v3.User)
@@ -755,7 +755,7 @@ func (m *userManager) checkLabels(principalName string) (*v3.User, labels.Set, e
 		if slice.ContainsString(u.PrincipalIDs, principalName) {
 			if match != nil {
 				// error out on duplicates
-				return nil, nil, errors.Errorf("can't find unique user for principal %v", principalName)
+				return nil, nil, errors.Errorf("758 can't find unique user for principal %v", principalName)
 			}
 			match = &u
 		}
